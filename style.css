@@ -1,0 +1,170 @@
+/* SET THE VARIABLES FOR THE DARK MODE*/
+
+:root
+{
+    --primaryColor: #E9425A;
+    --textColor: #fff;
+    --raw1: #951746;
+    --raw2: #C1153C;
+    --raw3: #C92349;
+    --features: #1D1638;
+}
+
+
+[data-theme="dark"]
+{
+    --primaryColor: #1D1638;
+    --textColor: #fff;
+    --raw1: #352A67;
+    --raw2: #5F4DAC;
+    --raw3: #9379FF;
+    --features: #E9425A;
+}
+
+
+/* IMPORT THE FONT */
+
+@font-face
+{
+    font-family: 'arial';
+    src: url(fonts/arial_jazz.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/* SET THE BASIC STYLE (including flexbox) */
+
+body
+{
+    font-family: arial;
+    letter-spacing: 3px;
+    font-size: 12px;
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+}
+
+
+.container_main
+{
+    width: 65vw;
+    margin: 0 auto;
+}
+
+
+.logo_light
+{
+    width: 30%;
+    margin-left: 1em;
+}
+
+
+/* SET THE DRUMPAD'S STYLE */
+
+.drum_pad{
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+}
+
+
+/* Set the pads style */
+
+.container_box
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 110px;
+    height: 110px;
+    border-radius: 7px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.box:hover
+{
+    transition: 0.5s ease;
+    background-color: var(--features);
+}
+
+
+.press
+{
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
+
+
+.raw1
+{
+    background-color: var(--raw1);
+}
+
+
+.raw2
+{
+    background-color: var(--raw2);
+}
+
+
+.raw3
+{
+    background-color: var(--raw3);
+}
+
+
+/* Set the features style */
+
+.container_features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.features
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 30px;
+    border-radius: 7px;
+    background-color: var(--features);
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+
+.feat1
+{
+    margin-bottom: 2em;
+}
+
+
+.feat2, .feat3
+{
+    -webkit-appearance: none;
+    margin-bottom: 2em;
+    color: var(--textColor);
+    font-size: 12px;
+    letter-spacing: 3px;
+    /*padding: 2em;*/
+    border: none;
+    outline: none;
+}
+
