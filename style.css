@@ -54,8 +54,8 @@ body
 
 .logo_light
 {
-    width: 30%;
-    margin-left: 1em;
+    width: 25%;
+    margin-left: 5em;
 }
 
 
@@ -64,7 +64,7 @@ body
 .drum_pad{
     display: flex;
     align-items: center;
-    margin-top: 3em;
+    margin-top: 10em;
 }
 
 
@@ -88,23 +88,15 @@ body
     border-radius: 7px;
     cursor: pointer;
     user-select: none;
+    text-align: center;
 }
 
 
 .box:hover
 {
-    transition: 0.5s ease;
-    background-color: var(--features);
-}
-
-
-.press
-{
-    display: flex;
-    align-items: center;
-    width: 90px;
-    height: 90px;
-    text-align: center;
+    transition: 0.3s ease;
+    /*background-color: var(--features);*/
+    opacity: 0.5;
 }
 
 
@@ -156,15 +148,54 @@ body
 }
 
 
-.feat2, .feat3
+.feat2
 {
     -webkit-appearance: none;
     margin-bottom: 2em;
     color: var(--textColor);
     font-size: 12px;
     letter-spacing: 3px;
-    /*padding: 2em;*/
     border: none;
     outline: none;
+    text-align-last: center;
 }
 
+
+.feat3
+{
+    -webkit-appearance: none;
+    color: var(--textColor);
+    font-size: 12px;
+    letter-spacing: 3px;
+    border: none;
+    outline: none;
+    text-align-last: center;
+}
+
+
+/* FOOTER */
+
+.footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 20em;
+}
+
+
+.footer_text
+{
+    text-decoration: none;
+    color: var(--features);
+}
+
+
+
+/* test anime */
+.anime{
+    transform: scale(1.1);
+    border-color: var(--textColor);
+    background-color: var(--features);
+    transition-duration: 0.3s;
+}
