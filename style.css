@@ -192,8 +192,9 @@ body
 
 
 
-/* test anime */
-.anime{
+/* ANIMATION WHEN THE SONG IS PLAYED */
+
+.animation{
     transform: scale(1.1);
     border-color: var(--textColor);
     background-color: var(--features);

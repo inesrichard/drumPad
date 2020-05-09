@@ -15,6 +15,7 @@ function themeDisplayChange()
     {
         document.documentElement.setAttribute('data-theme', 'default')
         themeDisplay.textContent = 'Dark'
+
     }
 }
 
@@ -30,19 +31,33 @@ window.addEventListener('keydown', function(e)
     if(!audio) return
     audio.play()
     audio.currentTime = 0
-    box.classList.add('anime') // ADD THE ANIMATION WHEN THE AUDIO IS PLAYED
+    box.classList.add('animation') // ADD THE ANIMATION WHEN THE AUDIO IS PLAYED
 })
 
 function removeTransition(e) 
 {
     if (e.propertyName !== 'transform') return
-    this.classList.remove('anime')
+    this.classList.remove('animation')
     console.log(e.propertyName)
 }
 
 const keys = document.querySelectorAll('.box')
 keys.forEach(box => box.addEventListener('transitionend', removeTransition)) // REMOVE THE ANIMATION WHEN THE AUDIO IS OVER
 
-  
+
 // PLAY THE AUDIO ON CLICK
+
+let box 
+
+keys.forEach((box) => {
+    box.addEventListener('click', (e) => { 
+        console.log(box.getAttribute('data-key'))
+        const audio = document.querySelector(`audio[data-key="${box.getAttribute('data-key')}"]`)
+        console.log(audio) 
+        if(!audio) return
+        audio.play()
+        audio.currentTime = 0
+        box.classList.add('animation') // ADD THE ANIMATION WHEN THE AUDIO IS PLAYED   
+        })
+})
 
