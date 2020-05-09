@@ -1,4 +1,4 @@
-/* SET THE VARIABLES FOR THE DARK MODE*/
+/***** SET THE VARIABLES FOR THE DARK MODE *****/
 
 :root
 {
@@ -22,7 +22,7 @@
 }
 
 
-/* IMPORT THE FONT */
+/***** IMPORT THE FONT *****/
 
 @font-face
 {
@@ -33,7 +33,7 @@
 }
 
 
-/* SET THE BASIC STYLE (including flexbox) */
+/***** SET THE BASIC STYLE (including flexbox) *****/
 
 body
 {
@@ -52,135 +52,175 @@ body
 }
 
 
-.logo_light
-{
-    width: 25%;
-    margin-left: 5em;
-}
+/*****  SET THE HEADER *****/
 
-
-/* SET THE DRUMPAD'S STYLE */
-
-.drum_pad{
-    display: flex;
-    align-items: center;
-    margin-top: 10em;
-}
-
-
-/* Set the pads style */
-
-.container_box
+.header
 {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-
-.box{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 20px;
-    width: 110px;
-    height: 110px;
-    border-radius: 7px;
-    cursor: pointer;
-    user-select: none;
+    align-content: center;
+    flex-direction: column;
     text-align: center;
 }
 
 
-.box:hover
-{
-    transition: 0.3s ease;
-    /*background-color: var(--features);*/
-    opacity: 0.5;
-}
-
-
-.raw1
-{
-    background-color: var(--raw1);
-}
-
-
-.raw2
-{
-    background-color: var(--raw2);
-}
-
-
-.raw3
-{
-    background-color: var(--raw3);
-}
-
-
-/* Set the features style */
-
-.container_features{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.features
+.logo_light
 {
     display: flex;
     justify-content: center;
+    align-content: center;
     align-items: center;
-    width: 110px;
-    height: 30px;
-    border-radius: 7px;
-    background-color: var(--features);
-    cursor: pointer;
+    width: 15em;
+    margin-bottom: 2em;
     user-select: none;
-    
+    cursor: pointer;
 }
 
 
-.feat1
+.title
 {
-    margin-bottom: 2em;
+    display: flex;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 15px;
+    color: var(--features);
 }
 
 
-.feat2
+.title:hover
 {
-    -webkit-appearance: none;
-    margin-bottom: 2em;
-    color: var(--textColor);
-    font-size: 12px;
-    letter-spacing: 3px;
-    border: none;
-    outline: none;
-    text-align-last: center;
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
+    user-select: none;
 }
 
 
-.feat3
+/***** SET THE DRUMPAD'S STYLE *****/
+
+.drum_pad
 {
-    -webkit-appearance: none;
-    color: var(--textColor);
-    font-size: 12px;
-    letter-spacing: 3px;
-    border: none;
-    outline: none;
-    text-align-last: center;
+    display: flex;
+    align-items: center;
+    margin-top: 7em;
 }
 
 
-/* FOOTER */
+    /* --- Set the pads style --- */
+
+    .container_box
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .box
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        width: 110px;
+        height: 110px;
+        border-radius: 7px;
+        cursor: pointer;
+        user-select: none;
+        text-align: center;
+    }
+
+
+    .box:hover
+    {
+        transition: 0.3s ease;
+        opacity: 0.5;
+    }
+
+
+    .raw1
+    {
+        background-color: var(--raw1);
+    }
+
+
+    .raw2
+    {
+        background-color: var(--raw2);
+    }
+
+
+    .raw3
+    {
+        background-color: var(--raw3);
+    }
+
+
+    /* --- Set the features style --- */
+
+    .container_features
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .features
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 30px;
+        border-radius: 7px;
+        background-color: var(--features);
+        cursor: pointer;
+        user-select: none;
+        
+    }
+
+
+    .feat1
+    {
+        margin-bottom: 2em;
+    }
+
+
+    .feat2
+    {
+        -webkit-appearance: none;
+        margin-bottom: 2em;
+        color: var(--textColor);
+        font-size: 12px;
+        letter-spacing: 3px;
+        border: none;
+        outline: none;
+        text-align-last: center;
+    }
+
+
+    .feat3
+    {
+        -webkit-appearance: none;
+        color: var(--textColor);
+        font-size: 12px;
+        letter-spacing: 3px;
+        border: none;
+        outline: none;
+        text-align-last: center;
+    }
+
+
+/***** FOOTER *****/
 
 .footer
 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 20em;
+    height: 16em;
 }
 
 
@@ -194,9 +234,10 @@ body
 
 /* ANIMATION WHEN THE SONG IS PLAYED */
 
-.animation{
+.animation
+{
     transform: scale(1.1);
-    border-color: var(--textColor);
     background-color: var(--features);
-    transition-duration: 0.3s;
+    transition: 0.3s ease-in-out;
 }
+
