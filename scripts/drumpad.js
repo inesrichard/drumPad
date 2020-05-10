@@ -61,3 +61,62 @@ keys.forEach((box) => {
         })
 })
 
+
+
+
+/*let feat3 = document.querySelector('.feat3')
+
+keys.forEach((feat3) => {
+    feat3.addEventListener('keydown', (e) => { 
+        console.log(feat3.getAttribute('data-key'))
+        const audio = document.querySelector(`audio[data-key="${feat3.getAttribute('data-key')}"]`)
+        console.log(audio) 
+        if(!audio) return
+        audio.play()
+        audio.currentTime = 0
+        })
+})*/
+
+let bar = document.querySelector('.bar')
+let hall = document.querySelector('.hall')
+let garden = document.querySelector('.garden')
+let sea = document.querySelector('.sea')
+
+function feat (){
+    feat.addEventListener('click', (e) => { 
+        if(bar = true)
+        {
+            console.log(feat.getAttribute('data-key'))
+            const audio = document.querySelector(`audio[data-key="${feat.getAttribute('data-key')}"]`)
+            console.log(audio) 
+            if(!audio) return
+            audio.play()
+            audio.currentTime = 0
+        }
+    })
+}
+
+
+
+
+
+
+
+
+// VOLUME BAR
+
+const volumeContainer = document.querySelector('.volume_container')
+const slider = volumeContainer.querySelector('.volume')
+let output = volumeContainer.querySelector('.value')
+let audioVolume = document.querySelectorAll('audio')
+
+output.innerHTML = slider.nodeValue
+
+slider.oninput = function(e) {
+    output.innerHTML = this.value*100
+    const volume = e.target.value
+    audioVolume.forEach(element => {
+        element.volume = volume
+    })
+    console.log(audioVolume)
+}

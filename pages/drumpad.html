@@ -26,7 +26,7 @@
                 <div data-key="83" class="box raw2">Piano 2<br>Press S</div>
                 <div data-key="68" class="box raw2">Piano 3<br>Press D</div>
                 <div data-key="70" class="box raw2">Bass 1<br>Press F</div>
-                <div data-key="71" class="box raw2">Bass 2<br>Pres G</div>
+                <div data-key="71" class="box raw2">Bass 2<br>Press G</div>
                 <div data-key="72" class="box raw2">Bass 3<br>Press H</div>
                 <div data-key="87" class="box raw3">Cymbal 1<br>Press W</div>
                 <div data-key="88" class="box raw3">Cymbal 2<br>Press X</div>
@@ -38,17 +38,21 @@
             <div class="container_features">
                 <div class="features feat1"><span class="theme_display">Dark</span></div>
                 <select class="features feat2">
-                    <option value="">No demo</option>
-                    <option value="">Demo 1</option>
+                    <option data-key="91" value="">No demo</option>
+                    <option data-key="93" value="">Demo 1</option>
                     <option value="">Demo 2</option>
                 </select>
                 <select class="features feat3">
                     <option value="">No mood</option>
-                    <option value="">Bar</option>
-                    <option value="">Hall</option>
-                    <option value="">Garden</option>
-                    <option value="">Sea</option>
+                    <option data-key="37" class="bar" value="">Bar</option>
+                    <option data-key="38" class="hall" value="">Hall</option>
+                    <option data-key="39" class="garden" value="">Garden</option>
+                    <option data-key="40" class="sea" value="">Sea</option>
                 </select>
+                <div class="volume_container">
+                    <input type="range" min="0" max="1" value="0.5" step="0.01" class="volume">
+                    <p class="p_volume">Volume: <span class="value"></span></p>
+                </div>
             </div>
         </div>
         <footer class="footer">
@@ -59,7 +63,7 @@
     <audio data-key="90" src="../audios/trombone2.mp3"></audio>
     <audio data-key="69" src="../audios/trumpet1.mp3"></audio>
     <audio data-key="82" src="../audios/trumpet2.mp3"></audio>
-    <audio data-key="84" src="./audios/sax1.mp3"></audio>
+    <audio data-key="84" src="../audios/sax1.mp3"></audio>
     <audio data-key="89" src="../audios/sax2.mp3"></audio>
     <audio data-key="81" src="../audios/piano1.mp3"></audio>
     <audio data-key="83" src="../audios/piano2.mp3"></audio>
@@ -74,10 +78,13 @@
     <audio data-key="66" src="../audios/crescendo.mp3"></audio>
     <audio data-key="78" src="../audios/kick.mp3"></audio>
 
-    <audio src="./audios/bar.mp3"></audio>
-    <audio src="./audios/hall.mp3"></audio>
-    <audio src="./audios/garden.mp3"></audio>
-    <audio src="./audios/sea.mp3"></audio>
+    <audio data-key="91" src="../audios/demo1.mp3"></audio>
+    <audio data-key="93" src="../audios/demo2.mp3"></audio>
+
+    <audio data-key="37" src="../audios/bar.mp3"></audio>
+    <audio data-key="38" src="../audios/hall.mp3"></audio>
+    <audio data-key="39" src="../audios/garden.mp3"></audio>
+    <audio data-key="40" src="../audios/sea.mp3"></audio>
 
     <script src="../scripts/drumpad.js"></script>
 </body>

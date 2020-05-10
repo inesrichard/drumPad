@@ -27,7 +27,7 @@
 @font-face
 {
     font-family: 'arial';
-    src: url(fonts/arial_jazz.ttf);
+    src: url(../fonts/arial_jazz.ttf);
     font-style: normal;
     font-weight: normal;
 }
@@ -42,6 +42,7 @@ body
     font-size: 12px;
     background-color: var(--primaryColor);
     color: var(--textColor);
+    transition: all 0.4s ease;
 }
 
 
@@ -185,6 +186,7 @@ body
 
     .feat1
     {
+        margin-top: 4em;
         margin-bottom: 2em;
     }
 
@@ -211,6 +213,49 @@ body
         border: none;
         outline: none;
         text-align-last: center;
+        margin-bottom: 2em;
+    }
+
+    .volume_container{
+        width: 110px;
+    }
+    
+    
+    /* Volume style */
+    
+    .volume{
+        -webkit-appearance: none;
+        width: 110px;
+        height: 9px;
+        background: var(--features);
+        outline: none;
+        -webkit-transition: 0.2s;
+        border-radius: 12px;
+    }
+    
+    .volume::-webkit-volume-thumb
+    {
+        -webkit-appearence: none;
+        appearance: none;
+        width: 40px;
+        height: 40px;
+        background: ;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+
+    .volume::-moz-range-thumb
+    {
+        width: 40px;
+        height: 40px;
+        background: ;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .p_volume{
+        text-align: center;
     }
 
 
@@ -241,4 +286,5 @@ body
     background-color: var(--features);
     transition: 0.3s ease-in-out;
 }
+
 
