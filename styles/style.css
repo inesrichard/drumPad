@@ -304,4 +304,35 @@ header
 }
 
 
-/* No media queries needed, the page is already responsive thanks to the use of "vw/vh", "%", and "em" */
+/***** RESPONSIVE *****/
+
+@media screen and (max-width:1024px)
+{
+
+    h5
+    {
+        font-size: 25px;
+        letter-spacing: 5px;
+        color: var(--features)
+    }
+
+
+    .link
+    {
+        color: var(--features);
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+
+    .arrow_container
+    {
+        display: none;
+    }
+
+
+    .block_2
+    {
+        margin-top: 10em;
+    }
+}
