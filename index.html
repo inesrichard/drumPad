@@ -2,82 +2,94 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device, initial-scale=1.0">
-    <title>SJC Drumpad
-    </title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device, initail-scale=1.0">
+    <title>SCJ Index</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head> 
 <body>
-    <div class="container_main">
-        <header class="header">
-            <svg class="logo_light"id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217.58 86.11"><defs><style>.cls-1{font-size:23px;letter-spacing:0.2em;}.cls-1,.cls-4{fill: var(--features);font-family:ArialMT, Arial;}.cls-2{font-size:9px;font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700;letter-spacing:0.03em;}.cls-3{fill:none;stroke: var(--features);stroke-miterlimit:10;stroke-width:0.5px;}.cls-4{font-size:22px;letter-spacing:0.2em;}</style></defs><text class="cls-1" transform="translate(97.95 23.65)">Sax<tspan class="cls-2"><tspan x="0" y="10.8">SCJ Drumpad since 2020</tspan></tspan></text><ellipse class="cls-3" cx="48.34" cy="63.84" rx="48.09" ry="22.02"/><rect class="cls-3" x="93.43" y="0.25" width="123.9" height="43.14"/><text class="cls-4" transform="translate(32.4 70)">Jazz</text><text class="cls-4" transform="translate(97.95 69.72)">Club</text></svg>
-            <h1 class="title">SJC Drumpad</h1>
+    <div class="main">
+
+
+        <!-- HEADER -->
+
+        <header>
+            <svg class="header_logo" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217.58 86.11"><defs><style>.cls-1{fill:none;stroke: var(--features);stroke-miterlimit:10;stroke-width:0.5px;}.cls-2{font-size:23px;letter-spacing:0.2em;}.cls-2,.cls-4{fill: var(--features);font-family:ArialMT, Arial;}.cls-3{font-size:9px;font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700;letter-spacing:0.03em;}.cls-4{font-size:22px;letter-spacing:0.2em;}</style></defs><ellipse class="cls-1" cx="48.34" cy="63.84" rx="48.09" ry="22.02"/><text class="cls-2" transform="translate(97.95 23.65)">Sax<tspan class="cls-3"><tspan x="0" y="10.8">SCJ Drumpad since 2020</tspan></tspan></text><rect class="cls-1" x="93.43" y="0.25" width="123.9" height="43.14"/><text class="cls-4" transform="translate(32.4 70)">Jazz</text><text class="cls-4" transform="translate(97.95 69.72)">Club</text></svg>   
         </header>
-        <div class="drum_pad">
-            <div class="container_box">
-                <div data-key="65" class="box raw1">Tromb 1<br>Press A</div>
-                <div data-key="90" class="box raw1">Tromb 2<br>Press Z</div>
-                <div data-key="69" class="box raw1">Trumpet 1<br>Press E</div>
-                <div data-key="82" class="box raw1">Trumpet 2<br>Press R</div>
-                <div data-key="84" class="box raw1">Sax 1<br>Press T</div>
-                <div data-key="89" class="box raw1">Sax 2<br>Press Y</div>
-                <div data-key="81" class="box raw2">Piano 1<br>Press Q</div>
-                <div data-key="83" class="box raw2">Piano 2<br>Press S</div>
-                <div data-key="68" class="box raw2">Piano 3<br>Press D</div>
-                <div data-key="70" class="box raw2">Bass 1<br>Press F</div>
-                <div data-key="71" class="box raw2">Bass 2<br>Pres G</div>
-                <div data-key="72" class="box raw2">Bass 3<br>Press H</div>
-                <div data-key="87" class="box raw3">Cymbal 1<br>Press W</div>
-                <div data-key="88" class="box raw3">Cymbal 2<br>Press X</div>
-                <div data-key="67" class="box raw3">Hat 1<br>Press C</div>
-                <div data-key="86" class="box raw3">Hat 2<br>Press V</div>
-                <div data-key="66" class="box raw3">Crash<br>Press B</div>
-                <div data-key="78" class="box raw3">Kick<br>Press N</div>
-            </div>
-            <div class="container_features">
-                <div class="features feat1"><span class="theme_display">Dark</span></div>
-                <select class="features feat2">
-                    <option value="">No demo</option>
-                    <option value="">Demo 1</option>
-                    <option value="">Demo 2</option>
-                </select>
-                <select class="features feat3">
-                    <option value="">No mood</option>
-                    <option value="">Bar</option>
-                    <option value="">Hall</option>
-                    <option value="">Garden</option>
-                    <option value="">Sea</option>
-                </select>
-            </div>
-        </div>
-        <footer class="footer">
-            <a href="https://github.com/inesrichard/drumPad" class="footer_text">Copyright 2020 © Inès Richard.</a>
-        </footer>
-    </div>  
-    <audio data-key="65" src="./audios/trombone1.mp3"></audio>
-    <audio data-key="90" src="./audios/trombone2.mp3"></audio>
-    <audio data-key="69" src="./audios/trumpet1.mp3"></audio>
-    <audio data-key="82" src="./audios/trumpet2.mp3"></audio>
-    <audio data-key="84" src="./audios/sax1.mp3"></audio>
-    <audio data-key="89" src="./audios/sax2.mp3"></audio>
-    <audio data-key="81" src="./audios/piano1.mp3"></audio>
-    <audio data-key="83" src="./audios/piano2.mp3"></audio>
-    <audio data-key="68" src="./audios/piano3.mp3"></audio>
-    <audio data-key="70" src="./audios/contrebasse1.mp3"></audio>
-    <audio data-key="71" src="./audios/contrebasse2.mp3"></audio>
-    <audio data-key="72" src="./audios/contrebasse3.mp3"></audio>
-    <audio data-key="87" src="./audios/cymbal_hard.mp3"></audio>
-    <audio data-key="88" src="./audios/cymbal_soft.mp3"></audio>
-    <audio data-key="67" src="./audios/open_hat.mp3"></audio>
-    <audio data-key="86" src="./audios/closed_hat.mp3"></audio>
-    <audio data-key="66" src="./audios/crescendo.mp3"></audio>
-    <audio data-key="78" src="./audios/kick.mp3"></audio>
 
-    <audio src="./audios/bar.mp3"></audio>
-    <audio src="./audios/hall.mp3"></audio>
-    <audio src="./audios/garden.mp3"></audio>
-    <audio src="./audios/sea.mp3"></audio>
 
+         <!-- MAIN -->
+
+        <main class="container_main">
+
+
+            <!-- Screen which links to the drumpad -->
+
+            <div class="block_1">
+                <h1 class="title">SJC Drumpad</h1>
+                <h3 class="sub_title">Welcome to Sax Jazz Club!</h3>
+                <a href="pages/drumpad.html">
+                    <img class="try" src="./images/try_drumpad.png" href="#">
+                </a>
+                <a href="#anchor" class="arrow_container">
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                </a>
+            </div>
+
+
+            <!-- Screen which explains the drumpad -->
+
+            <div class="block_2">
+
+
+                <!-- Various explicatives paragraphes -->
+
+                <div class="paragraphes">
+                    <h5 id="anchor">Who are we ?</h5>
+                    <p class="us">Sax Jazz Club is a small club created around the world of jazz as part of a school project in 2020. It was founded by Inès Richard, a student at Hétic. Sax Jazz Club has developed a drumpad dedicated to jazz.<br>In order to push the concept to the maximum, the logo is a direct reference to jazz, namely the "Stereo Blue Note".</p>
+                    <div class="ref_logo">
+                        <img class="logo_r" src="./images/logo.png">
+                        <img class="ref_r" src="./images/ref_logo.png">
+                    </div>
+                </div>
+                <div class="paragraphes">
+                    <h5>Our drumpad</h5>
+                    <p>As we said earlier, our drumpad is built around the world of jazz. Thus, you will find 18 "pads" playing jazz sounds. You can play these sounds via the keyboard (each pad is assigned a keyboard key).<br><br>On the right side of the pads, you will find features. 
+                        <br>The "Light" button allows you to change the mood of the drumpad and switch to night mode.
+                        <br>The " No demo " button allows you to play small tunes composed with the sounds of the drumpad. They serve as a demonstration, to inspire you. These demonstrations can be stopped at any time by choosing the " No demo " option.
+                        <br>The button " No mood " is special. During its glory years, jazz was played a lot in bars, open places etc. in front of an audience. Therefore, this button allows you to add a sound which is a mood sound, to inlay your compositions using the drumpad in an environment. These ambient sounds can be stopped at any time by selecting the " No mood " option.
+                        <br>Finally, the volume bar allows you to adjust the volume of the drumpad.<br><br>All the samples of this drumpad come from the website <a class="link" href="https://samplefocus.com/">Sample Focus</a> and the pictures from the website <a class="link" href="https://unsplash.com/">Unsplash</a>. The logo and the images retouching were made by Inès Richard.
+                    </p>
+                </div>
+                <div class="paragraphes">
+                    <h5>Some playlist</h5>
+                    <p>We perfectly know it, our drumpad is limited. Even if it provides 18 sounds, the creation you will be able to make with it will never be better than real jazz song. That's why we propose you different jazz playlists depending on the services you use! Enjoy!</p>
+                    <div class="playlist">
+                        <a href="https://www.youtube.com/watch?v=RPfFhfSuUZ4&list=PL8F6B0753B2CCA128">
+                            <img class="youtube" src="./images/youtube.png">
+                        </a>
+                        <a href="https://www.deezer.com/fr/playlist/151692581">
+                            <img class="deezer" src="./images/deezer.png">
+                        </a>
+                        <a href="https://open.spotify.com/playlist/05Hd48jdQIz3s8WRrvGnzf#_=_">
+                            <img class="spotify" src="./images/spotify.png">
+                        </a>
+                        <a href="https://music.apple.com/fr/album/le-meilleur-du-jazz-50-titres-de-l%C3%A9gende-remasteris%C3%A9/539489004">
+                            <img class="apple" src="./images/apple_music.png">
+                        </a>
+                    </div>
+
+
+                    <!-- FOOTER -->
+
+                    <footer class="footer">
+                        <a href="https://github.com/inesrichard/drumPad" class="footer_text">Copyright 2020 © Inès Richard.</a>
+                    </footer>  
+                </div>
+            </div>
+        </div>  
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

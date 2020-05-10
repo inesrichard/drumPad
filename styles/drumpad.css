@@ -83,6 +83,7 @@ body
     display: flex;
     text-align: center;
     font-size: 40px;
+    font-weight: 300;
     letter-spacing: 15px;
     color: var(--features);
 }

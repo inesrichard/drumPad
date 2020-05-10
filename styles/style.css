@@ -1,0 +1,307 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/***** SET THE VARIABLES FOR THE DARK MODE *****/
+
+:root
+{
+    --primaryColor: #E9425A;
+    --textColor: #fff;
+    --features: #1D1638;
+}
+
+
+[data-theme="dark"]
+{
+    --primaryColor: #1D1638;
+    --textColor: #fff;
+    --features: #E9425A;
+}
+
+
+@font-face
+{
+    font-family: 'arial';
+    src: url(/fonts/arial_jazz.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/***** SET THE BASIC STYLE (including flexbox) *****/
+
+body
+{
+    display: flex;
+    justify-content: center;
+    font-family: arial;
+    letter-spacing: 1px;
+    font-size: 15px;
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+}
+
+
+.main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h5
+{
+    font-size: 25px;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    color: var(--features)
+}
+
+
+/***** SET THE HEADER *****/
+
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.header_logo
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 15em;
+    margin-bottom: 2em;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+/***** SET THE MAIN STYLE *****/
+
+.container_main
+{
+    display: flex;
+    width: 65vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+    /* --- Set the title and subtitle style --- */
+
+    .title
+    {
+        font-size: 40px;
+        font-weight: lighter;
+        letter-spacing: 15px;
+        text-align: center;
+    }
+
+
+    .sub_title
+    {
+        font-size: 25px;
+        font-weight: lighter;
+        letter-spacing: 8px;
+        margin-top: 2em;
+        text-align: center;
+    }
+
+
+    /* --- Set the link to the drumpad --- */  
+
+    .try
+    {
+        width: 40em;
+        margin-top: 7em;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    
+        /* Animation "Try" on hover */
+
+        .try:hover
+        {
+            transition: 0.3s ease-in-out;
+            transform: scale(1.25);
+        }
+
+
+    /* --- Set the arrow animation --- */
+
+    .arrow_container
+    {
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 58em;
+        left: 50.7%;
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+
+    .arrow:nth-child(1) {
+        opacity: 0.3;
+        top: 35%;
+    }
+
+
+    .arrow:nth-child(2) 
+    {
+        opacity: 0.6;
+        top: 55%;
+    }
+
+
+    .arrow:nth-child(3) 
+    {
+        opacity: 0.9;
+        top: 75%;
+    }
+
+
+    .arrow 
+    {
+        position: absolute;
+        left: 50%;
+        transition: all 0.4s ease-in-out;
+    }
+
+
+    .arrow::before, .arrow::after
+    {
+        transition: all 0.4s ease-in-out;
+        content: "";
+        display: block;
+        position: absolute;
+        transform-origin: bottom right;
+        background: var(--textColor);
+        width: 3px;
+        height: 30px;
+        border-radius: 10px;
+        transform: translate(-50%, -50%) rotateZ(-45deg);
+    }
+
+
+    .arrow:after 
+    {
+        transform-origin: bottom left;
+        transform: translate(-50%, -50%) rotateZ(45deg);
+    }
+
+
+    .arrow_container:hover .arrow 
+    {
+        top: 50%;
+    }
+
+
+    /* --- Set the informative text style --- */
+
+    .block_2
+    {
+        margin-top: 25em;
+    }
+
+
+    .paragraphes
+    {
+        margin-bottom: 7em;
+    }
+
+
+         /* Images about the logo */
+
+        .ref_logo
+        {
+            display: flex;
+            justify-content: center;
+            margin-top: 6em;
+        }
+
+
+        .logo_r
+        {
+            width: 15vw;
+            margin-right: 4em;
+        }
+
+
+        .ref_r
+        {
+            width: 15vw;
+            margin-left: 4em;
+        }
+
+
+        /* Images and links about the playlists */  
+
+        .playlist
+        {
+            display: flex;
+            justify-content: space-evenly;
+            justify-content: center;
+        }
+
+
+        .youtube, .deezer
+        {
+            width: 22%;
+            margin-top: 3em;
+        }
+
+
+        .spotify, .apple
+        {
+            width: 20%;
+            margin-top: 3em;
+        }
+
+
+        .link
+        {
+            color: var(--features);
+            text-decoration: none;
+            font-weight: 900;
+        }
+
+
+        .playlist a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+/***** SET THE FOOTER *****/
+
+.footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 11em;
+}
+
+
+.footer_text
+{
+    text-decoration: none;
+    color: var(--features);
+    letter-spacing: 3px;
+}
+
+
+/* No media queries needed, the page is already responsive thanks to the use of "vw/vh", "%", and "em" */
