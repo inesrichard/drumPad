@@ -306,12 +306,13 @@ header
 
 /***** RESPONSIVE *****/
 
-@media screen and (max-width:1024px)
+@media screen and (max-width:1024px) /* Responsive for Ipad and smaller screen such as mobile */
 {
 
     h5
     {
         font-size: 25px;
+        font-weight: normal;
         letter-spacing: 5px;
         color: var(--features)
     }
