@@ -29,8 +29,8 @@ window.addEventListener('keydown', function(e)
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
     const box = document.querySelector(`.box[data-key="${e.keyCode}"]`)
     if(!audio) return
-    audio.play()
     audio.currentTime = 0
+    audio.play()
     box.classList.add('animation') // ADD THE ANIMATION WHEN THE AUDIO IS PLAYED
 })
 
@@ -55,52 +55,11 @@ keys.forEach((box) => {
         const audio = document.querySelector(`audio[data-key="${box.getAttribute('data-key')}"]`)
         console.log(audio) 
         if(!audio) return
-        audio.play()
         audio.currentTime = 0
+        audio.play()
         box.classList.add('animation') // ADD THE ANIMATION WHEN THE AUDIO IS PLAYED   
         })
 })
-
-
-
-
-/*let feat3 = document.querySelector('.feat3')
-
-keys.forEach((feat3) => {
-    feat3.addEventListener('keydown', (e) => { 
-        console.log(feat3.getAttribute('data-key'))
-        const audio = document.querySelector(`audio[data-key="${feat3.getAttribute('data-key')}"]`)
-        console.log(audio) 
-        if(!audio) return
-        audio.play()
-        audio.currentTime = 0
-        })
-})*/
-
-let bar = document.querySelector('.bar')
-let hall = document.querySelector('.hall')
-let garden = document.querySelector('.garden')
-let sea = document.querySelector('.sea')
-
-function feat (){
-    feat.addEventListener('click', (e) => { 
-        if(bar = true)
-        {
-            console.log(feat.getAttribute('data-key'))
-            const audio = document.querySelector(`audio[data-key="${feat.getAttribute('data-key')}"]`)
-            console.log(audio) 
-            if(!audio) return
-            audio.play()
-            audio.currentTime = 0
-        }
-    })
-}
-
-
-
-
-
-
 
 
 // VOLUME BAR
@@ -110,10 +69,10 @@ const slider = volumeContainer.querySelector('.volume')
 let output = volumeContainer.querySelector('.value')
 let audioVolume = document.querySelectorAll('audio')
 
-output.innerHTML = slider.nodeValue
+output.innerHTML = 50
 
 slider.oninput = function(e) {
-    output.innerHTML = this.value*100
+    output.innerHTML = Math.floor(this.value*100)
     const volume = e.target.value
     audioVolume.forEach(element => {
         element.volume = volume
