@@ -68,6 +68,27 @@ function themeDisplayChange()
 themeDisplay.addEventListener('click', themeDisplayChange)
 
 
+// PLAY THE DEMO AUDIO ON CLICK WHEN IT IS SELECTED
+
+let demo1 = document.querySelector('audio[data-key="8"]')
+let demo2 = document.querySelector('audio[data-key="13"]')
+const feat2 = document.querySelector('.feat2')
+let selected1
+
+feat2.addEventListener('input', (e) => { 
+    demo1.pause() //STOP THE AUDIO "Demo 1" CURRENTLY PLAYED IF ANOTHER IS SELECTED
+    demo2.pause() //STOP THE AUDIO "Demo 2" CURRENTLY PLAYED IF ANOTHER IS SELECTED
+    selected1 = feat2.options[feat2.selectedIndex].textContent
+    {
+        const audio = document.querySelector(`audio[data-key="${feat2.options[feat2.selectedIndex].getAttribute('data-key')}"]`)
+        console.log(audio) 
+        if(!audio) return
+        audio.currentTime = 0
+        audio.play()
+        audio.loop()
+    }
+})
+
 
 // PLAY THE MOOD AUDIO ON CLICK WHEN IT IS SELECTED
 
@@ -76,30 +97,27 @@ let hall = document.querySelector('audio[data-key="38"]')
 let garden = document.querySelector('audio[data-key="39"]')
 let sea = document.querySelector('audio[data-key="40"]')
 const feat3 = document.querySelector('.feat3')
-let selected 
-
-console.log(bar)
-
+const bg = document.querySelector('.bg_feat')
+let selected2
 
 feat3.addEventListener('input', (e) => { 
     bar.pause() //STOP THE AUDIO "Bar" CURRENTLY PLAYED IF ANOTHER IS SELECTED
     hall.pause() //STOP THE AUDIO "Hall" CURRENTLY PLAYED IF ANOTHER IS SELECTED
     garden.pause() //STOP THE AUDIO "Garden" CURRENTLY PLAYED IF ANOTHER IS SELECTED
     sea.pause() //STOP THE AUDIO "Sea" CURRENTLY PLAYED IF ANOTHER IS SELECTED
-    selected = feat3.options[feat3.selectedIndex].textContent
+    selected2 = feat3.options[feat3.selectedIndex].textContent
     {
         const audio = document.querySelector(`audio[data-key="${feat3.options[feat3.selectedIndex].getAttribute('data-key')}"]`)
-        console.log(audio) 
         if(!audio) return
         audio.currentTime = 0
         audio.play()
     }
+        if(selected2 === bar)
+        {
+            bg.classList.add('bg_bar')
+            console.log(bar)   
+        }
 })
-
-
-    // if(selected === bar)
-
-
 
 
 // VOLUME BAR - LINK THE VOLUME TO THE RANGE SLIDER AND DISPLAY THE VALUE
