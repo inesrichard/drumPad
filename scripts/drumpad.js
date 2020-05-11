@@ -109,7 +109,7 @@ const slider = volumeContainer.querySelector('.volume')
 let output = volumeContainer.querySelector('.value')
 let audioVolume = document.querySelectorAll('audio')
 
-output.innerHTML = 50
+output.textContent = 50
 
 slider.oninput = function(e) {
     output.innerHTML = Math.floor(this.value*100)
