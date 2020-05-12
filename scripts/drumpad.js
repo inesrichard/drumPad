@@ -1,3 +1,25 @@
+// --- DECLARATION OF ALL THE VARIABLES --- //
+
+const keys = document.querySelectorAll('.box')
+const themeDisplay = document.querySelector('.feat1')
+let demo1 = document.querySelector('audio[data-key="8"]')
+let demo2 = document.querySelector('audio[data-key="13"]')
+let bar = document.querySelector('audio[data-key="37"]')
+let hall = document.querySelector('audio[data-key="38"]')
+let garden = document.querySelector('audio[data-key="39"]')
+let sea = document.querySelector('audio[data-key="40"]')
+const feat2 = document.querySelector('.feat2')
+const feat3 = document.querySelector('.feat3')
+const bg = document.querySelector('.bg_feat')
+let selected1
+let selected2
+let box 
+const volumeContainer = document.querySelector('.volume_container')
+const slider = volumeContainer.querySelector('.volume')
+let output = volumeContainer.querySelector('.value')
+let audioVolume = document.querySelectorAll('audio')
+
+
 // --- SAMPLES --- //
 
 // PLAY THE SAMPLE AUDIO ON KEYDOWN
@@ -19,14 +41,10 @@ function removeTransition(e)
     console.log(e.propertyName)
 }
 
-const keys = document.querySelectorAll('.box')
 keys.forEach(box => box.addEventListener('transitionend', removeTransition)) // REMOVE THE ANIMATION WHEN THE AUDIO IS OVER
 
 
-
 // PLAY THE SAMPLE AUDIO ON CLICK
-
-let box 
 
 keys.forEach((box) => {
     box.addEventListener('click', (e) => { 
@@ -41,12 +59,9 @@ keys.forEach((box) => {
 })
 
 
-
 // --- FEATURES --- //
 
 // SET THE DARK MODE
-
-const themeDisplay = document.querySelector('.feat1')
 
 function themeDisplayChange()
 {
@@ -70,11 +85,6 @@ themeDisplay.addEventListener('click', themeDisplayChange)
 
 // PLAY THE DEMO AUDIO ON CLICK WHEN IT IS SELECTED
 
-let demo1 = document.querySelector('audio[data-key="8"]')
-let demo2 = document.querySelector('audio[data-key="13"]')
-const feat2 = document.querySelector('.feat2')
-let selected1
-
 feat2.addEventListener('input', (e) => { 
     demo1.pause() //STOP THE AUDIO "Demo 1" CURRENTLY PLAYED IF ANOTHER IS SELECTED
     demo2.pause() //STOP THE AUDIO "Demo 2" CURRENTLY PLAYED IF ANOTHER IS SELECTED
@@ -91,14 +101,6 @@ feat2.addEventListener('input', (e) => {
 
 
 // PLAY THE MOOD AUDIO ON CLICK WHEN IT IS SELECTED
-
-let bar = document.querySelector('audio[data-key="37"]')
-let hall = document.querySelector('audio[data-key="38"]')
-let garden = document.querySelector('audio[data-key="39"]')
-let sea = document.querySelector('audio[data-key="40"]')
-const feat3 = document.querySelector('.feat3')
-const bg = document.querySelector('.bg_feat')
-let selected2
 
 feat3.addEventListener('input', (e) => { 
     bar.pause() //STOP THE AUDIO "Bar" CURRENTLY PLAYED IF ANOTHER IS SELECTED
@@ -121,17 +123,9 @@ feat3.addEventListener('input', (e) => {
 
 // VOLUME BAR - LINK THE VOLUME TO THE RANGE SLIDER AND DISPLAY THE VALUE
 
-const volumeContainer = document.querySelector('.volume_container')
-const slider = volumeContainer.querySelector('.volume')
-let output = volumeContainer.querySelector('.value')
-let audioVolume = document.querySelectorAll('audio')
-
-output.textContent = 50   
+output.textContent = 50 
 
 slider.oninput = function(e) {
-
-    audioVolume = 0.5
-
     output.innerHTML = Math.floor(this.value*100)
     const volume = e.target.value
     audioVolume.forEach(element => {

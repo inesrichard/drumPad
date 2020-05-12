@@ -320,6 +320,7 @@ body
 .title:hover
 {
     transition: 0.3s ease-in-out;
+    transform: scale(1.2);
     user-select: none;
     -webkit-text-stroke-width: 0.7px;
     -webkit-text-stroke-color: var(--features);
