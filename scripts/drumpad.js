@@ -112,10 +112,9 @@ feat3.addEventListener('input', (e) => {
         audio.currentTime = 0
         audio.play()
     }
-        if(selected2 === bar)
+        if(selected2 == bar)
         {
             bg.classList.add('bg_bar')
-            console.log(bar)   
         }
 })
 
@@ -127,9 +126,12 @@ const slider = volumeContainer.querySelector('.volume')
 let output = volumeContainer.querySelector('.value')
 let audioVolume = document.querySelectorAll('audio')
 
-output.textContent = 50
+output.textContent = 50   
 
 slider.oninput = function(e) {
+
+    audioVolume = 0.5
+
     output.innerHTML = Math.floor(this.value*100)
     const volume = e.target.value
     audioVolume.forEach(element => {

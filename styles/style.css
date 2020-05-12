@@ -309,6 +309,10 @@ header
 @media screen and (max-width:1024px) /* Responsive for Ipad and smaller screen such as mobile */
 {
 
+    .title, .sub_title{
+        font-weight: normal;
+    }
+
     h5
     {
         font-size: 25px;

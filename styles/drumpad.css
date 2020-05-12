@@ -33,6 +33,185 @@
 }
 
 
+/***** ON-LOAD ANIMATION *****/
+
+.col1 
+{
+    animation: col1 4s;
+}
+
+@keyframes col1 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    5%{
+        opacity: 0;
+    }
+    10%
+    {
+        opacity: 1;
+    }
+}
+
+
+.col2 
+{
+    animation: col2 4s;
+}
+
+@keyframes col2 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    10%
+    {
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 1;
+    }
+  
+}
+
+
+.col3 
+{
+    animation: col3 4s;
+}
+
+@keyframes col3 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 0;
+    }
+    30%
+    {
+        opacity: 1;
+    }
+  
+}
+
+
+.col4
+{
+    animation: col4 4s;
+}
+
+@keyframes col4 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    30%
+    {
+        opacity: 0;
+    }
+    40%
+    {
+        opacity: 1;
+    }
+}
+
+
+.col5
+{
+    animation: col5 4s;
+}
+
+@keyframes col5
+{
+    0%
+    {
+        opacity: 0;
+    }
+    40%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+}
+
+
+.col6
+{
+    animation: col6 4s;
+}
+
+@keyframes col6
+{
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+    60%
+    {
+        opacity: 1;
+    }
+}
+
+
+.col7
+{
+    animation: col7 4s;
+}
+
+@keyframes col7
+{
+    0%
+    {
+        opacity: 0;
+    }
+    60%
+    {
+        opacity: 0;
+    }
+    70%
+    {
+        opacity: 1;
+    }
+}
+
+
+.title, .logo_light, .footer_text
+{
+    animation: body 5s;
+}
+
+@keyframes body
+{
+    0%
+    {
+        opacity: 0;
+    }
+    60%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+
 /***** SET THE BASIC STYLE (including flexbox) *****/
 
 .bg_feat
@@ -204,6 +383,7 @@ body
     .letter
     {
         font-weight: lighter;
+        font-size: 10px;
     }
 
 
@@ -341,7 +521,6 @@ body
 }
 
 
-
 /* ANIMATION WHEN THE SONG IS PLAYED */
 
 .animation
@@ -350,6 +529,7 @@ body
     background-color: var(--features);
     transition: 0.4s ease-in-out;
 }
+
 
 /***** RESPONSIVE *****/
 
