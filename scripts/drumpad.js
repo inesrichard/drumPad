@@ -157,7 +157,7 @@ feat3.addEventListener('input', (e) => {
         }*/
        
         // This part doesnt' work. I wanted to add an image that represents the mood in background, but I can't find a way to remove the class which have been added before.
-
+})
 
 
 
