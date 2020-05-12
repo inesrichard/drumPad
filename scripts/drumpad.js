@@ -97,7 +97,6 @@ feat2.addEventListener('input', (e) => {
         if(!audio) return
         audio.currentTime = 0
         audio.play()
-        audio.loop()
 })
 
 
@@ -113,22 +112,17 @@ feat3.addEventListener('input', (e) => {
         if(!audio) return
         audio.currentTime = 0
         audio.play()
-        if(selected2 == bar)
+        /*if(selected2 == bar)
         {
            
             bg.classList.add('bg_bar')
+            bg.classList.remove('bg_hall')
+            bg.classList.remove('bg_garden')
+            bg.classList.remove('bg_sea')
             
-        }
+        }*/ // This part doesnt' work. I wanted to add an image that represents the mood in background, so in the fill "images" you will find 4 images, of a bar, a hall, a garden, and the sea. I should have 4 "if" and one "else" to cover all the options but since it didn't even work for the bar, I didn't code them.
 })
 
-/*feat3.addEventListener('input', (e) => { 
-    selected2 = feat3.options[feat3.selectedIndex]
-        if(selected2 == bar)
-        {
-            bg.classList.add('bg_bar')
-            console.log(bar)
-        }       
-})*/
 
 // VOLUME BAR - LINK THE VOLUME TO THE RANGE SLIDER AND DISPLAY THE VALUE
 
