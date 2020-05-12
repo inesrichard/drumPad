@@ -190,6 +190,23 @@ body
     }
 
 
+    .text
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-self: center;
+        align-content: center;
+        align-items: center;
+    }
+    
+
+    .letter
+    {
+        font-weight: lighter;
+    }
+
+
     .raw1
     {
         background-color: var(--raw1);
@@ -332,20 +349,6 @@ body
     transform: scale(1.1);
     background-color: var(--features);
     transition: 0.4s ease-in-out;
-}
-
-
-.text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-self: center;
-    align-content: center;
-    align-items: center;
-}
-
-.letter{
-    font-weight: lighter;
 }
 
 /***** RESPONSIVE *****/
