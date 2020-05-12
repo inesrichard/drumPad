@@ -1,23 +1,26 @@
 // --- DECLARATION OF ALL THE VARIABLES --- //
-
-const keys = document.querySelectorAll('.box')
-const themeDisplay = document.querySelector('.feat1')
-let demo1 = document.querySelector('audio[data-key="8"]')
-let demo2 = document.querySelector('audio[data-key="13"]')
-let bar = document.querySelector('audio[data-key="37"]')
-let hall = document.querySelector('audio[data-key="38"]')
-let garden = document.querySelector('audio[data-key="39"]')
-let sea = document.querySelector('audio[data-key="40"]')
-const feat2 = document.querySelector('.feat2')
-const feat3 = document.querySelector('.feat3')
-const bg = document.querySelector('.bg_feat')
+const drumPad = document.querySelector('.drum_pad')
+const containerBox = drumPad.querySelector('.container_box')
+const containerFeatures = drumPad.querySelector('.container_features')
+const containerAudio = document.querySelector('.container_audio')
+const keys = containerBox.querySelectorAll('.box')
+const themeDisplay = containerFeatures.querySelector('.feat1')
+const demo1 = containerAudio.querySelector('audio[data-key="8"]')
+const demo2 = containerAudio.querySelector('audio[data-key="13"]')
+const bar = containerAudio.querySelector('audio[data-key="37"]')
+const hall = containerAudio.querySelector('audio[data-key="38"]')
+const garden = containerAudio.querySelector('audio[data-key="39"]')
+const sea = containerAudio.querySelector('audio[data-key="40"]')
+const feat2 = containerFeatures.querySelector('.feat2')
+const feat3 = containerFeatures.querySelector('.feat3')
+let bg = document.querySelector('.bg_feat')
 let selected1
 let selected2
 let box 
-const volumeContainer = document.querySelector('.volume_container')
+const volumeContainer = containerFeatures.querySelector('.volume_container')
 const slider = volumeContainer.querySelector('.volume')
 let output = volumeContainer.querySelector('.value')
-let audioVolume = document.querySelectorAll('audio')
+let audioVolume = containerAudio.querySelectorAll('audio')
 
 
 // --- SAMPLES --- //
@@ -88,15 +91,13 @@ themeDisplay.addEventListener('click', themeDisplayChange)
 feat2.addEventListener('input', (e) => { 
     demo1.pause() //STOP THE AUDIO "Demo 1" CURRENTLY PLAYED IF ANOTHER IS SELECTED
     demo2.pause() //STOP THE AUDIO "Demo 2" CURRENTLY PLAYED IF ANOTHER IS SELECTED
-    selected1 = feat2.options[feat2.selectedIndex].textContent
-    {
+    selected1 = feat2.options[feat2.selectedIndex]
         const audio = document.querySelector(`audio[data-key="${feat2.options[feat2.selectedIndex].getAttribute('data-key')}"]`)
         console.log(audio) 
         if(!audio) return
         audio.currentTime = 0
         audio.play()
         audio.loop()
-    }
 })
 
 
@@ -106,20 +107,28 @@ feat3.addEventListener('input', (e) => {
     bar.pause() //STOP THE AUDIO "Bar" CURRENTLY PLAYED IF ANOTHER IS SELECTED
     hall.pause() //STOP THE AUDIO "Hall" CURRENTLY PLAYED IF ANOTHER IS SELECTED
     garden.pause() //STOP THE AUDIO "Garden" CURRENTLY PLAYED IF ANOTHER IS SELECTED
-    sea.pause() //STOP THE AUDIO "Sea" CURRENTLY PLAYED IF ANOTHER IS SELECTED
-    selected2 = feat3.options[feat3.selectedIndex].textContent
-    {
+    sea.pause() //STOP THE AUDIO "Sea" CURRENTLY PLAYED IF ANOTHER IS SELECTED   
+    selected2 = feat3.options[feat3.selectedIndex]
         const audio = document.querySelector(`audio[data-key="${feat3.options[feat3.selectedIndex].getAttribute('data-key')}"]`)
         if(!audio) return
         audio.currentTime = 0
         audio.play()
-    }
         if(selected2 == bar)
         {
+           
             bg.classList.add('bg_bar')
+            
         }
 })
 
+/*feat3.addEventListener('input', (e) => { 
+    selected2 = feat3.options[feat3.selectedIndex]
+        if(selected2 == bar)
+        {
+            bg.classList.add('bg_bar')
+            console.log(bar)
+        }       
+})*/
 
 // VOLUME BAR - LINK THE VOLUME TO THE RANGE SLIDER AND DISPLAY THE VALUE
 
